@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de Control de Citas de Quirófano</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Panel de Control de Citas de Quirófano</h1>
+
+      <button class="btn">Agregar Nueva Cita</button>
+
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="Buscar por nombre, apellido o diagnóstico"
+        />
+      </div>
+
+      <table class="citas-table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cirujano</th>
+            <th>Diagnóstico</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2023-06-01</td>
+            <td>10:00</td>
+            <td>Juan</td>
+            <td>Pérez</td>
+            <td>Dr. García</td>
+            <td>Apendicitis</td>
+            <td><button class="btn btn-small">Editar</button></td>
+          </tr>
+          <tr>
+            <td>2023-06-02</td>
+            <td>11:30</td>
+            <td>María</td>
+            <td>López</td>
+            <td>Dra. Rodríguez</td>
+            <td>Hernia</td>
+            <td><button class="btn btn-small">Editar</button></td>
+          </tr>
+          <!-- Más filas de citas aquí -->
+        </tbody>
+      </table>
+
+      <div class="form-container">
+        <h2>Nueva Cita</h2>
+        <form class="cita-form">
+          <div class="form-group">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required />
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora" required />
+          </div>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required />
+          </div>
+          <div class="form-group">
+            <label for="sexo">Sexo</label>
+            <select id="sexo" name="sexo" required>
+              <option value="">Seleccionar</option>
+              <option value="masculino">Masculino</option>
+              <option value="femenino">Femenino</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" required />
+          </div>
+          <div class="form-group">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" name="peso" required />
+          </div>
+          <div class="form-group">
+            <label for="vpo">
+              <input type="checkbox" id="vpo" name="vpo" />
+              Valoración preoperatoria (VPO)
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="aseguradora">Aseguradora</label>
+            <input type="text" id="aseguradora" name="aseguradora" />
+          </div>
+          <div class="form-group">
+            <label for="diagnostico">Diagnóstico</label>
+            <input type="text" id="diagnostico" name="diagnostico" required />
+          </div>
+          <div class="form-group">
+            <label for="cirujano">Cirujano</label>
+            <input type="text" id="cirujano" name="cirujano" required />
+          </div>
+          <div class="form-group">
+            <label for="anestesiologo">Anestesiólogo</label>
+            <input type="text" id="anestesiologo" name="anestesiologo" />
+          </div>
+          <div class="form-group">
+            <label for="ayudante">Ayudante</label>
+            <input type="text" id="ayudante" name="ayudante" />
+          </div>
+          <div class="form-group">
+            <label for="pediatra">Pediatra</label>
+            <input type="text" id="pediatra" name="pediatra" />
+          </div>
+          <div class="form-group">
+            <label for="imagen">Imagen (Placa, RX)</label>
+            <input type="text" id="imagen" name="imagen" />
+          </div>
+          <div class="form-group">
+            <label for="proveedor">Proveedor</label>
+            <input type="text" id="proveedor" name="proveedor" />
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-cancel">Cancelar</button>
+            <button type="submit" class="btn btn-submit">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

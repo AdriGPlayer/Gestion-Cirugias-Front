@@ -1,0 +1,142 @@
+:root {
+  --background: #121212;
+  --surface: #1e1e1e;
+  --primary: #bb86fc;
+  --secondary: #03dac6;
+  --on-background: #ffffff;
+  --on-surface: #ffffff;
+  --on-primary: #000000;
+  --on-secondary: #000000;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--on-background);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: var(--primary);
+}
+
+.btn {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-small {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.btn-cancel {
+  background-color: #cf6679;
+}
+
+.btn-submit {
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+}
+
+.search-bar {
+  margin: 20px 0;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--surface);
+  background-color: var(--surface);
+  color: var(--on-surface);
+}
+
+.citas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.citas-table th,
+.citas-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--surface);
+}
+
+.citas-table th {
+  background-color: var(--surface);
+  color: var(--primary);
+}
+
+.citas-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-container {
+  background-color: var(--surface);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.cita-form {
+  display: grid;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  color: var(--on-surface);
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--primary);
+  background-color: var(--background);
+  color: var(--on-background);
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .cita-form {
+    grid-template-columns: 1fr;
+  }
+}
+
